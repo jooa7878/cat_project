@@ -1,2 +1,9 @@
 # cat_project
-simple project using react, nest
+
+## Frontend
+
+> React.js, TypeScript, React-query
+
+## Backend
+
+> NEST.js

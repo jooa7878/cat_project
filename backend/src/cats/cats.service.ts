@@ -19,7 +19,7 @@ export class CatsService {
     if (isCatExist) {
       throw new UnauthorizedException('해당하는 고양이는 이미 존재합니다.');
     }
-
+    console.log('test');
     const hashedPassword = await bcrpyt.hash(password, 10);
 
     const cat = await this.catModel.create({

@@ -2,7 +2,7 @@
 
 ## Frontend
 
-> React.js, TypeScript, React-query
+> React.js, NEXT.js, TypeScript, React-query
 
 ## Backend
 

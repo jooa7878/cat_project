@@ -18,6 +18,7 @@ export class CatsService {
     const { email, password, name } = body;
     const isCatExist = await this.catsRepository.existsByEmail(email);
     if (isCatExist) {
+      console.log('Exist');
       throw new UnauthorizedException('해당하는 고양이는 이미 존재합니다.');
     }
 
@@ -30,5 +31,18 @@ export class CatsService {
     });
 
     return cat.readOnlyData;
+  }
+
+  async uploadImg(cat: Cat, files: Express.Multer.File[]) {
+    const fileName = `cats/${files[0].filename}`;
+
+    console.log(fileName);
+    const newCat = await this.catsRepository.findByIdAndUpdateImg(
+      cat.id,
+      fileName,
+    );
+
+    console.log(newCat);
+    return newCat;
   }
 }

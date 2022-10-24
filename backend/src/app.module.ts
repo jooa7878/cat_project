@@ -6,7 +6,7 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import mongoose from 'mongoose';
 import { LoggerMiddleware } from './common/middlewares/logger.middleware';
-import { CatsController } from './cats/cats.controller';
+import { CatsController } from './cats/controller/cats.controller';
 import { CatsModule } from './cats/cats.module';
 import { AuthModule } from './auth/auth.module';
 
